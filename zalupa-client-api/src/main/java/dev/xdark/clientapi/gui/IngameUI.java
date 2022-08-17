@@ -1,0 +1,14 @@
+package dev.xdark.clientapi.gui;
+
+import dev.xdark.clientapi.Side;
+import dev.xdark.clientapi.SidedApi;
+
+@SidedApi(Side.BOTH)
+public interface IngameUI {
+
+  ChatOverlay getDefaultChatOverlay();
+
+  ChatOverlay getChatOverlay();
+
+  void setChatOverlay(ChatOverlay chatOverlay);
+}

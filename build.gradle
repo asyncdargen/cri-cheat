@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.dargen'
+version '1.0'
+
+allprojects {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+        maven { url 'https://repo.implario.dev/public/' }
+    }
+}
+
+subprojects {
+
+    apply plugin: 'java'
+
+    dependencies {
+
+        compile fileTree(dir: 'libs', includes: ['*.jar'])
+
+        compileOnly 'org.lwjgl.lwjgl:lwjgl:2.9.3'
+        compileOnly 'org.lwjgl.lwjgl:lwjgl_util:2.9.3'
+        compileOnly 'com.mojang:authlib:2.1.28'
+        compileOnly 'io.netty:netty-buffer:4.1.66.Final'
+        compileOnly 'dev.xdark:feder:live-SNAPSHOT'
+        compileOnly 'com.google.guava:guava:21.0'
+        compileOnly 'org.apache.logging.log4j:log4j-api:2.8.1'
+        compileOnly 'org.apache.logging.log4j:log4j-core:2.8.1'
+        compileOnly 'it.unimi.dsi:fastutil:8.3.1'
+        compileOnly 'com.google.code.gson:gson:2.8.7'
+        compileOnly 'dev.xdark:optlibrary:1.0.5'
+
+        compileOnly 'org.projectlombok:lombok:1.18.10'
+        annotationProcessor 'org.projectlombok:lombok:1.18.10'
+        testAnnotationProcessor 'org.projectlombok:lombok:1.18.10'
+
+    }
+
+    tasks.withType(JavaCompile)*.options*.encoding = 'UTF-8'
+}

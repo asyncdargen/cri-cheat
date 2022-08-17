@@ -1,0 +1,4 @@
+dependencies {
+    compileOnly project(':zalupa-client-api')
+    compileOnly project(':zalupa-classes')
+}

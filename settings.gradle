@@ -1,0 +1,4 @@
+rootProject.name = 'zalupa'
+
+include 'zalupa-client-api', 'zalupa-cheat', 'zalupa-classes'
+

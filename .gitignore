@@ -1,0 +1,9 @@
+# Project exclude paths
+/.gradle/
+/zalupa-cheat/build/
+/zalupa-cheat/build/classes/java/main/
+/zalupa-client-api/build/
+/zalupa-client-api/build/classes/java/main/
+# Project exclude paths
+/zalupa-classes/build/
+/zalupa-classes/build/classes/java/main/
